@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © Ladonenko. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+?>
+<?php
+/** @var \Ladonenko\OrderNote\Block\Order\Note $block */
+?>
+<?php if ($block->isShowNoteInAccount()) : ?>
+    <?php if ($note = $block->getOrderNote()) : ?>
+    <div class="block block-order-note um-ordernote-block">
+        <div class="block-content">     
+            <div class="block-title">
+                <strong><?php /* @escapeNotVerified */ echo __('Order Note') ?></strong>
+            </div>          
+            <div class="box-content">
+                <?php echo $block->getOrderNoteHtml();?>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+<?php endif; ?>

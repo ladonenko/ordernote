@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © Ladonenko. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+?>
+<?php
+    $customer_note = '';
+    if($block->getCustomer()->getCustomAttribute('customer_note')) {
+        $customer_note = $block->getCustomer()->getCustomAttribute('customer_note')->getValue();
+    }
+?>
+<fieldset class="fieldset create account" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
+    <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Additional Information') ?></span></legend>
+    <div class="field customer_note">
+        <label for="my_attribute" class="label"><span><?php /* @escapeNotVerified */ echo __('Order default note') ?></span></label>
+        <div class="control">
+            <input type="text" name="customer_note" id="customer_note" title="<?php /* @escapeNotVerified */ echo __('Order default note') ?>" value="<?php echo $customer_note;?>" class="input-text" autocomplete="off">
+        </div>
+    </div>
+</fieldset>

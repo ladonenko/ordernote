@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Ladonenko. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ladonenko_extensions" translate="label" sortOrder="8888888">
+            <label>Ladonenko Extensions</label>
+        </tab>  	
+        <section id="ordernote" translate="label" type="text" sortOrder="435" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Checkout Order Note</label>
+            <tab>ladonenko_extensions</tab>
+            <resource>Ladonenko_OrderNote::config_ordernote</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>General</label>
+                <field id="is_show_default_note" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Show default notes if customer note is not available?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="ntlm" sortOrder="60" type="select" showInDefault="1" showInWebsite="1" showInStore="0" translate="label">
+                    <label>Default note text</label>
+                    <source_model>\Ladonenko\OrderNote\Model\Adminhtml\Config\Source\DefaultNotes</source_model>
+                    <depends>
+                        <field id="*/*/is_show_default_note">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

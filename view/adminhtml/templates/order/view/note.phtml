@@ -1,0 +1,20 @@
+<?php
+/**
+ * OrderNote
+ *
+ * @package     Ladonenko_OrderNote
+ * @author      Ladonenko
+ * @copyright   Copyright (c) 2019
+ * @license     LICENSE.txt
+ */
+?>
+<?php if ($note = $block->getOrderNote()) :?>
+    <section class="admin__page-section um-ordernote">
+        <div class="admin__page-section-title">
+            <span class="title"><?php /* @noEscape */ echo __('Order Note') ?></span>
+        </div>
+        <div class="admin__page-section-content">
+            <?php /* @noEscape */ echo nl2br($block->escapeHtml($note));?>
+        </div>
+    </section>
+<?php endif; ?>

@@ -1,0 +1,12 @@
+{
+    "name": "ladonenko/ordernote",
+    "description": "Order Note for Magento 2 by Ladonenko",
+    "type": "magento2-module",
+    "version": "2.1.3",
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Ladonenko\\OrderNote\\": ""
+        }
+    }
+}
