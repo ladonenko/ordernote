@@ -8,8 +8,8 @@ namespace Ladonenko\OrderNote\Helper;
 
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
-    const XPATH_IS_SHOW_DEFAULT_NOTE = "ladonenko_extensions/ordernote/is_show_default_note";
-    const XPATH_DEFAULT_NOTE = "ladonenko_extensions/ordernote/ntlm";
+    const XPATH_IS_SHOW_DEFAULT_NOTE = "ordernote/general/is_show_default_note";
+    const XPATH_DEFAULT_NOTE = "ordernote/general/ntlm";
     const NOTE_FIELD_NAME = 'order_note';
 
     /**
